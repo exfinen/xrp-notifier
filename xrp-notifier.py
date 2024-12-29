@@ -50,7 +50,6 @@ def get_balance(account):
         return int(balance) / 1_000_000
 
     except Exception as e:
-        print(f"Getting balaance failed: {e}")
         return None
 
 last_notified = None
