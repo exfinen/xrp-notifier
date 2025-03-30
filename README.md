@@ -5,8 +5,8 @@ A simple script that periodically checks an XRP account’s balance and sends an
 ## Installation
 
 ```
-python3 -m venv ~/.xrp-notifier-venv
-source ~/.xrp-notifier-venv/bin/activate
+python3 -m venv venv
+source venv/bin/activate
 python3 -m pip install xrpl-py
 ```
 

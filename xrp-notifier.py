@@ -55,7 +55,7 @@ def get_balance(account):
 last_notified = None
 should_notify = False
 
-def start():
+def start_server():
     global should_notify
     global last_notified
     global XRP_NOTIFIER_XRP_ACCOUNT
@@ -78,6 +78,18 @@ def start():
 
         hour = 60 * 60
         time.sleep(1 * hour)
+
+def start_lambda(_event, _context):
+    global should_notify
+    global last_notified
+    global XRP_NOTIFIER_XRP_ACCOUNT
+
+    account = os.getenv(XRP_NOTIFIER_XRP_ACCOUNT)
+    balance = get_balance(account)
+
+    if balance is not None and balance > 10:
+        msg = f"Balance: {balance}"
+        send_email(msg)
 
 if __name__ == "__main__":
     start()
