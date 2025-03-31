@@ -3,7 +3,11 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from datetime import datetime, timedelta
 import time
+import sys
 import os
+
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 import xrpl
 
 XRP_NOTIFIER_GMAIL_ACCOUNT = "XRP_NOTIFIER_GMAIL_ACCOUNT"

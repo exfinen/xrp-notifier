@@ -19,3 +19,10 @@ XRP_NOTIFIER_SEND_TO=<Email recipient> \
 XRP_NOTIFIER_XRP_ACCOUNT=<XRP account> \
 python3 xrp-notifier.py
 ```
+
+## Creating a lambda package
+
+```
+./gen-lambda-package.sh
+```
+
