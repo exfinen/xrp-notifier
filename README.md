@@ -20,9 +20,18 @@ XRP_NOTIFIER_XRP_ACCOUNT=<XRP account> \
 python3 xrp-notifier.py
 ```
 
-## Creating a lambda package
+## Building a lambda package
+
+On x86_64 machine,
 
 ```
 ./gen-lambda-package.sh
+```
+
+## AWS Lambda setup
+At the bottom of the code tab, in runtime configuration, set handler to:
+
+```
+lambda.xrp_notifier.start_lambda
 ```
 
