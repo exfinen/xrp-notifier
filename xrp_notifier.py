@@ -84,8 +84,6 @@ def start_server():
     time.sleep(1 * hour)
 
 def start_lambda(_event, _context):
-  global should_notify
-  global last_notified
   global XRP_NOTIFIER_XRP_ACCOUNT
 
   account = os.getenv(XRP_NOTIFIER_XRP_ACCOUNT)
