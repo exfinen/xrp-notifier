@@ -96,5 +96,5 @@ def start_lambda(_event, _context):
     send_email(msg)
 
 if __name__ == "__main__":
-    start()
+    start_server()
 
